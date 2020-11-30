@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>working with multiple checkboxes & radio button</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    </head>
+    <body>
+        <form id="fruits">
+            <input type="checkbox" id="apple" value="apple" v-model="checkedfruits">
+            <label for="apple">apple</label>
+            <input type="checkbox" id="mango" value="mango" v-model="checkedfruits">
+            <label for="mango">mango</label>
+            <input type="checkbox" id="orange" value="orange" v-model="checkedfruits">
+            <label for="orange">orange</label>
+            <br>
+            <h1>{{ checkedfruits }}</h1>
+        </form>
+        <div id="myform">
+            <input type="radio" id="male" value="male" name="gender" v-model="radiogender">
+            <label for="male">male</label>
+
+            <input type="radio" id="female" value="female" name="gender" v-model="radiogender">
+            <label for="female">female</label>
+            <br>
+            <h2>{{ radiogender }}</h2>
+        </div>
+        <script>
+            const vueCheckbox = new Vue({
+                el: "#fruits",
+                data: {
+                    checkedfruits: []
+                },
+                methods: {
+
+                }
+            })
+            console.log(vueCheckbox);
+            const vueRadio = new Vue({
+                el: "#myform",
+                data: {
+                    radiogender: ""
+                },
+                method: {
+
+                }
+            })
+        </script>
+    </body>
+</html>
