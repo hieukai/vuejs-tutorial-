@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <h1>Learn Vuejs Select & MultiSelect</h1>
+    </head>
+    <body>
+        <div id="games">
+            <select name="" id="" v-model="mychoice" multiple>
+                <option value="Football">Football</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Tennis">Tennis</option>
+            </select>
+            <h2>To select multiple hold control key on Your Keyboard</h2>
+            <h3>{{mychoice}}</h3>
+            <button @click="cleardata">clear</button>
+        </div>
+        <script>
+            const VueComp = new Vue({
+                el: "#games",
+                data: {
+                    mychoice: []
+                },
+                methods: {
+                    cleardata(){
+                        this.mychoice = []
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
